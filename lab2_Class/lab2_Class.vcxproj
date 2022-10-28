@@ -127,7 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="lab2_Class.cpp" />
+    <ClCompile Include="Rectang.cpp" />
+    <ClCompile Include="Square.cpp" />
+    <ClCompile Include="Trapezoid.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Otrezok.h" />
+    <ClInclude Include="Rectang.h" />
+    <ClInclude Include="Square.h" />
+    <ClInclude Include="Trapezoid.h" />
+    <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
