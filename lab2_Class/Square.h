@@ -4,7 +4,6 @@
 class Square
 {
 private:
-	char color[20];
 	Otrezok length;
 
 public:

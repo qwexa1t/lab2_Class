@@ -4,15 +4,16 @@
 
 class Rectang
 {
-public:
-	char color[20];
+private:
 	Otrezok length;
-
-	//прототипы функций
-	Rectang initRectang(int a, int b);
-	Rectang setRectang(Rectang rectang1);
-	int areaRectang(Rectang rectang1);
-	void printRectang(Rectang rectang1);
-
+public:
+	Rectang(); //Конструктор без параметров
+	Rectang(int a,int b);//Конструктор с параметрами
+	Rectang(int a);//Конструктор с 1 параметром
+	~Rectang(); //Деструктор
+	void setRectang(); //прототипы методов
+	void printRectang();
+	int areaRectang();
 };
+
 
