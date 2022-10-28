@@ -3,18 +3,22 @@
 
 class Triangle
 {
-public:
-	char color[20];
+private:
 	Otrezok length;
-	char type;
 
-	//прототипы функций
-	Triangle initTriangle(int a, int b);
-	Triangle setTriangle(Triangle triangle1);
-	float  areaTriangle(Triangle triangle1);
-	void printTriangle(Triangle triangle1);
-
+public:
+	Triangle(); //Конструктор без параметров
+	Triangle(int a,int b);//Конструктор с параметрами
+	~Triangle(); //Деструктор
+	void setTriangle(); //прототипы методов
+	void printTriangle();
+	float areaTriangle();
 };
+
+
+
+
+
 
 
 

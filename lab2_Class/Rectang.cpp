@@ -8,7 +8,6 @@ Rectang::Rectang() //Конструктор без параметров
 {
 	length.storona[0] = 0;
 	length.storona[1] = 0;
-
 }
 
 Rectang::Rectang(int a,int b) //Конструктор с параметрами
@@ -25,7 +24,6 @@ Rectang::Rectang(int a) //Конструктор с 1 параметром
 
 Rectang ::~Rectang() //Деструктор
 {
-
 }
 
 void Rectang::setRectang()

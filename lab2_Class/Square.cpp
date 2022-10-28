@@ -8,18 +8,15 @@
 Square::Square() //Конструктор без параметров
 {
 	length.storona[0] = 4;
-
 }
 
 Square::Square(int value_storona) //Конструктор с параметрами
 {
 	length.storona[0] = value_storona;
-
 }
 
 Square::~Square() //Деструктор
 {
-
 }
 
 void Square::setSquare()

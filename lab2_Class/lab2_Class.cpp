@@ -57,8 +57,8 @@ int main()
 		 {
 			 printf("\n Вы выбрали Прямоугольник \n");
 			 printf("\n Пример \n");
-			 //Вызов конструктора с 2 параметрами
-			 Rectang* rectang1 = new Rectang(2,6); //Выделение Динамической памяти объекту класса Rectang
+			 //Вызов конструктора с 1 параметром
+			 Rectang* rectang1 = new Rectang(7); //Выделение Динамической памяти объекту класса Rectang
 			 rectang1->printRectang(); //Вывод площади квадрата на экран
 			 printf("\n\n Введите данные: \n\n");
 			 rectang1->setRectang(); //Установка значений
@@ -68,7 +68,16 @@ int main()
 		 }
 		 case 3:
 		 {
-			break;
+			 printf("\n Вы выбрали Треугольник \n");
+			 printf("\n Пример \n");
+			 //Вызов конструктора с 2 параметрами
+			 Triangle* triangle1 = new Triangle(3, 5); //Выделение Динамической памяти объекту класса Rectang
+			 triangle1->printTriangle(); //Вывод площади квадрата на экран
+			 printf("\n\n Введите данные: \n\n");
+			 triangle1->setTriangle(); //Установка значений
+			 triangle1->printTriangle();
+			 delete triangle1; //освобождение памяти
+			 break;
 		 }
 		 case 4:
 		 {
