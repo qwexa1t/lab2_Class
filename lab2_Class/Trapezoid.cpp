@@ -3,36 +3,54 @@
 #include <stdio.h>
 #include<math.h>
 
-Trapezoid initTrapezoid(int a, int b, int c)
+Trapezoid::Trapezoid() //Конструктор без параметров
 {
-	Trapezoid trapezoid1;
-	trapezoid1.length.osnovanie[0] = a;
-	trapezoid1.length.osnovanie[1] = b;
-	trapezoid1.length.height[0] = c;
-	return trapezoid1;
+	length.osnovanie[0] = 0;
+	length.osnovanie[1] = 0;
+	length.height[0] = 0;
 }
-Trapezoid setTrapezoid(Trapezoid trapezoid1)
+
+Trapezoid::Trapezoid(int a, int b, int c) //Конструктор с параметрами
+{
+	length.osnovanie[0] = a;
+	length.osnovanie[1] = b;
+	length.height[0] = c;
+}
+
+Trapezoid::Trapezoid(int a) //Конструктор с 1 параметром
+{
+	length.osnovanie[0] = a;
+	length.osnovanie[1] = 1;
+	length.height[0] = 1;
+}
+
+Trapezoid::~Trapezoid() //Деструктор
+{
+}
+
+void Trapezoid::setTrapezoid()
 {
 	printf(" Введите Нижнее Основание:");
-	scanf("%d", &trapezoid1.length.osnovanie[0]);
+	scanf("%d", &length.osnovanie[0]);
 	printf(" Введите Верхнее Основание:");
-	scanf("%d", &trapezoid1.length.osnovanie[1]);
+	scanf("%d", &length.osnovanie[1]);
 	printf(" Введите Высоту:");
-	scanf("%d", &trapezoid1.length.height[0]);
-
-	return trapezoid1;
+	scanf("%d", &length.height[0]);
 }
-float areaTrapezoid(Trapezoid trapezoid1)
+
+float Trapezoid::areaTrapezoid()
 {
 	float area;
-	area = 0.5 * (trapezoid1.length.osnovanie[0] + trapezoid1.length.osnovanie[1]) * trapezoid1.length.height[0];
+	area = 0.5 * (length.osnovanie[0] + length.osnovanie[1]) * length.height[0];
 	return area;
 }
-void printTrapezoid(Trapezoid trapezoid1)
+
+void Trapezoid::printTrapezoid()
 {
-	printf("\n  Нижнее Основание - %d", trapezoid1.length.osnovanie[0]);
-	printf("\n  Верхнее Основание - %d", trapezoid1.length.osnovanie[1]);
-	printf("\n  Высота - %d", trapezoid1.length.height[0]);
-	printf("\n Площадь - %.2f\n", areaTrapezoid(trapezoid1));
+	printf("\n Нижнее Основание - %d", length.osnovanie[0]);
+	printf("\n Верхнее Основание - %d", length.osnovanie[1]);
+	printf("\n Высота - %d", length.height[0]);
+	printf("\n Площадь - %.2f\n", areaTrapezoid());
 }
+
 

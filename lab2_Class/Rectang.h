@@ -6,6 +6,7 @@ class Rectang
 {
 private:
 	Otrezok length;
+
 public:
 	Rectang(); //Конструктор без параметров
 	Rectang(int a,int b);//Конструктор с параметрами

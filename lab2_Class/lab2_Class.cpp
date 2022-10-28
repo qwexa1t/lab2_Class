@@ -59,7 +59,7 @@ int main()
 			 printf("\n Пример \n");
 			 //Вызов конструктора с 1 параметром
 			 Rectang* rectang1 = new Rectang(7); //Выделение Динамической памяти объекту класса Rectang
-			 rectang1->printRectang(); //Вывод площади квадрата на экран
+			 rectang1->printRectang(); //Вывод площади Прямоугольника на экран
 			 printf("\n\n Введите данные: \n\n");
 			 rectang1->setRectang(); //Установка значений
 			 rectang1->printRectang();
@@ -71,8 +71,8 @@ int main()
 			 printf("\n Вы выбрали Треугольник \n");
 			 printf("\n Пример \n");
 			 //Вызов конструктора с 2 параметрами
-			 Triangle* triangle1 = new Triangle(3, 5); //Выделение Динамической памяти объекту класса Rectang
-			 triangle1->printTriangle(); //Вывод площади квадрата на экран
+			 Triangle* triangle1 = new Triangle(3, 5); //Выделение Динамической памяти объекту класса Triangle
+			 triangle1->printTriangle(); //Вывод площади Треугольника на экран
 			 printf("\n\n Введите данные: \n\n");
 			 triangle1->setTriangle(); //Установка значений
 			 triangle1->printTriangle();
@@ -81,6 +81,15 @@ int main()
 		 }
 		 case 4:
 		 {
+			 printf("\n Вы выбрали Трапецию \n");
+			 printf("\n Пример \n");
+			 //Вызов конструктора с 3 параметрами
+			 Trapezoid* trapezoid1 = new Trapezoid(4, 2, 3); //Выделение Динамической памяти объекту класса Trapezoid
+			 trapezoid1->printTrapezoid(); //Вывод площади Трапеции на экран
+			 printf("\n\n Введите данные: \n\n");
+			 trapezoid1->setTrapezoid(); //Установка значений
+			 trapezoid1->printTrapezoid();
+			 delete trapezoid1; //освобождение памяти;
 			break;
 		 }
 		 case 5:

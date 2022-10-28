@@ -22,7 +22,7 @@ Rectang::Rectang(int a) //Конструктор с 1 параметром
 	length.storona[1] = 1;
 }
 
-Rectang ::~Rectang() //Деструктор
+Rectang::~Rectang() //Деструктор
 {
 }
 
