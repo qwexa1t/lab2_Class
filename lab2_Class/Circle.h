@@ -1,17 +1,20 @@
 #pragma once
-
 #include "Otrezok.h"
 
-class Сircle
+class Circle
 {
-public:
-	char color[20];
+private:
 	Otrezok length;
 
-	Сircle initСircle(int a);
-	Сircle setСircle(Сircle circle1);
-	float areaСircle(Сircle circle1);
-	void printСircle(Сircle circle1);
-
+public:
+	Circle(); //Конструктор без параметров
+	Circle(int a);//Конструктор с параметрами
+	~Circle(); //Деструктор
+	void setCircle(); //прототипы методов
+	void printCircle();
+	float areaCircle();
 };
+
+
+
 

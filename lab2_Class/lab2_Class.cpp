@@ -90,11 +90,20 @@ int main()
 			 trapezoid1->setTrapezoid(); //Установка значений
 			 trapezoid1->printTrapezoid();
 			 delete trapezoid1; //освобождение памяти;
-			break;
+			 break;
 		 }
 		 case 5:
 		 {
-			break;
+			 printf("\n Вы выбрали Круг \n");
+			 printf("\n Пример \n");
+			 //Вызов конструктора с 1 параметром
+			 Circle* circle1 = new Circle(6); //Выделение Динамической памяти объекту класса Circle
+			 circle1->printCircle(); //Вывод площади Круга на экран
+			 printf("\n\n Введите данные: \n\n");
+			 circle1->setCircle(); //Установка значений
+			 circle1->printCircle();
+			 delete circle1; //освобождение памяти;
+			 break;
 		 }
 
 		}

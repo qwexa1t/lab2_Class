@@ -1,31 +1,40 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "Circle.h"
+#include <iostream>
 #include <stdio.h>
 #include<math.h>
 #define PI 3.14
+#include "Circle.h"
 
-Сircle initСircle(int a)
+
+Circle::Circle() //Конструктор без параметров
 {
-	Сircle circle1;
-	circle1.length.radius[0] = a;
-	return circle1;
+	length.radius[0] = 1;
 }
-Сircle setСircle(Сircle circle1)
+
+Circle::Circle(int a) //Конструктор с параметрами
+{
+	length.radius[0] = a;
+}
+
+Circle::~Circle() //Деструктор
+{
+}
+
+void Circle::setCircle()
 {
 	printf(" Введите Радиус:");
-	scanf("%d", &circle1.length.radius[0]);
-	return circle1;
+	scanf("%d", &length.radius[0]);
 }
-float areaСircle(Сircle circle1)
+
+float Circle::areaCircle()
 {
 	float area;
-	area = PI * circle1.length.radius[0] * circle1.length.radius[0];
+	area = PI * length.radius[0] * length.radius[0];
 	return area;
 }
-void printСircle(Сircle circle1)
+
+void Circle::printCircle()
 {
-	printf("\n Радиус - %d", circle1.length.radius[0]);
-	printf("\n Площадь - %.2f\n", areaСircle(circle1));
+	printf("\n Радиус - %d", length.radius[0]);
+	printf("\n Площадь - %.2f\n", areaCircle());
 }
-
-
