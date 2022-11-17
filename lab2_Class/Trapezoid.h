@@ -1,19 +1,19 @@
 #pragma once
 
-#include "Otrezok.h"
-
 class Trapezoid
 {
 private:
-	Otrezok length;
+	int lower_base;
+	int upper_base;
+	int height;
 
 public:
 	Trapezoid(); //Конструктор без параметров
-	Trapezoid(int a, int b, int c);//Конструктор с параметрами
-	Trapezoid(int a);//Конструктор с 1 параметром
+	Trapezoid(int value_lower_base, int value_upper_base, int value_height);//Конструктор с параметрами
+	Trapezoid(int value_lower_base);//Конструктор с 1 параметром
 	~Trapezoid(); //Деструктор
-	void setTrapezoid(); //прототипы методов
-	void printTrapezoid();
-	float areaTrapezoid();
+	void set(); //прототипы методов
+	void print();
+	float area();
 };
 

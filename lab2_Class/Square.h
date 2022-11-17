@@ -1,18 +1,17 @@
 #pragma once
-#include "Otrezok.h"
 
 class Square
 {
 private:
-	Otrezok length;
+	int side;
 
 public:
 	Square(); //Конструктор без параметров
-	Square(int value_storona);//Конструктор с параметрами
+	Square(int value_side);//Конструктор с параметрами
 	~Square(); //Деструктор
-	void setSquare(); //прототипы методов
-	void printSquare();
-	int areaSquare();
+	void set(); //прототипы методов
+	void print();
+	int area();
 };
 
 

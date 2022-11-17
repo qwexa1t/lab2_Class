@@ -1,18 +1,18 @@
 #pragma once
-#include "Otrezok.h"
 
 class Triangle
 {
 private:
-	Otrezok length;
+	int side;
+	int height;
 
 public:
 	Triangle(); //Конструктор без параметров
-	Triangle(int a,int b);//Конструктор с параметрами
+	Triangle(int value_side,int value_height);//Конструктор с параметрами
 	~Triangle(); //Деструктор
-	void setTriangle(); //прототипы методов
-	void printTriangle();
-	float areaTriangle();
+	void set(); //прототипы методов
+	void print();
+	float area();
 };
 
 

@@ -5,52 +5,50 @@
 
 Trapezoid::Trapezoid() //Конструктор без параметров
 {
-	length.osnovanie[0] = 0;
-	length.osnovanie[1] = 0;
-	length.height[0] = 0;
+	lower_base = 0;
+	upper_base = 0;
+	height = 0;
 }
 
-Trapezoid::Trapezoid(int a, int b, int c) //Конструктор с параметрами
+Trapezoid::Trapezoid(int value_lower_base, int value_upper_base, int value_height) //Конструктор с параметрами
 {
-	length.osnovanie[0] = a;
-	length.osnovanie[1] = b;
-	length.height[0] = c;
+	lower_base = value_lower_base;
+	upper_base = value_upper_base;
+	height = value_height;
 }
 
-Trapezoid::Trapezoid(int a) //Конструктор с 1 параметром
+Trapezoid::Trapezoid(int value_lower_base) //Конструктор с 1 параметром
 {
-	length.osnovanie[0] = a;
-	length.osnovanie[1] = 1;
-	length.height[0] = 1;
+	lower_base = value_lower_base;
+	upper_base = 1;
+	height = 1;
 }
 
 Trapezoid::~Trapezoid() //Деструктор
 {
 }
 
-void Trapezoid::setTrapezoid()
+void Trapezoid::set()
 {
 	printf(" Введите Нижнее Основание:");
-	scanf("%d", &length.osnovanie[0]);
+	scanf("%d", &lower_base);
 	printf(" Введите Верхнее Основание:");
-	scanf("%d", &length.osnovanie[1]);
+	scanf("%d", &upper_base);
 	printf(" Введите Высоту:");
-	scanf("%d", &length.height[0]);
+	scanf("%d", &height);
 }
 
-float Trapezoid::areaTrapezoid()
+float Trapezoid::area()
 {
-	float area;
-	area = 0.5 * (length.osnovanie[0] + length.osnovanie[1]) * length.height[0];
-	return area;
+	return 0.5 * (lower_base + upper_base) * height;
 }
 
-void Trapezoid::printTrapezoid()
+void Trapezoid::print()
 {
-	printf("\n Нижнее Основание - %d", length.osnovanie[0]);
-	printf("\n Верхнее Основание - %d", length.osnovanie[1]);
-	printf("\n Высота - %d", length.height[0]);
-	printf("\n Площадь - %.2f\n", areaTrapezoid());
+	printf("\n Нижнее Основание - %d", lower_base);
+	printf("\n Верхнее Основание - %d", upper_base);
+	printf("\n Высота - %d", height);
+	printf("\n Площадь - %.2f\n", area());
 }
 
 

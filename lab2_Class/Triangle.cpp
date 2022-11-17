@@ -6,40 +6,38 @@
 
 Triangle::Triangle() //Конструктор без параметров
 {
-	length.storona[0] = 0;
-	length.height[0] = 0;
+	side = 0;
+	height = 0;
 }
 
-Triangle::Triangle(int a,int b) //Конструктор с параметрами
+Triangle::Triangle(int value_side,int value_height) //Конструктор с параметрами
 {
-	length.storona[0] = a;
-	length.height[0] = b;
+	side = value_side;
+	height = value_height;
 }
 
 Triangle::~Triangle() //Деструктор
 {
 }
 
-void Triangle::setTriangle()
+void Triangle::set()
 {
 	printf(" Введите сторону:");
-	scanf("%d", &length.storona[0]);
+	scanf("%d", &side);
 	printf(" Введите Высоту:");
-	scanf("%d", &length.height[0]);
+	scanf("%d", &height);
 }
 
-float Triangle::areaTriangle()
+float Triangle::area()
 {
-	float  area;
-	area = 0.5 * length.storona[0] * length.height[0];
-	return area;
+	return 0.5 * side * height;
 }
 
-void Triangle::printTriangle()
+void Triangle::print()
 {
-	printf("\n Сторона - %d", length.storona[0]);
-	printf("\n Высота - %d", length.height[0]);
-	printf("\n Площадь - %.2f\n", areaTriangle());
+	printf("\n Сторона - %d", side);
+	printf("\n Высота - %d", height);
+	printf("\n Площадь - %.2f\n", area());
 }
 
 

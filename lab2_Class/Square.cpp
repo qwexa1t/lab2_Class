@@ -7,33 +7,31 @@
 
 Square::Square() //Конструктор без параметров
 {
-	length.storona[0] = 4;
+	side = 4;
 }
 
-Square::Square(int value_storona) //Конструктор с параметрами
+Square::Square(int value_side) //Конструктор с параметрами
 {
-	length.storona[0] = value_storona;
+	side = value_side;
 }
 
 Square::~Square() //Деструктор
 {
 }
 
-void Square::setSquare()
+void Square::set()
 {
 	printf(" Введите сторону:");
-	scanf("%d", &length.storona[0]);
+	scanf("%d", &side);
 }
 
-int Square::areaSquare()
+int Square::area()
 {
-	int area;
-	area = length.storona[0] * length.storona[0];
-	return area;
+	return side * side;
 }
 
-void Square::printSquare()
+void Square::print()
 {
-	printf("\n Сторона - %d", length.storona[0]);
-	printf("\n Площадь - %d\n", areaSquare());
+	printf("\n Сторона - %d", side);
+	printf("\n Площадь - %d\n", area());
 }

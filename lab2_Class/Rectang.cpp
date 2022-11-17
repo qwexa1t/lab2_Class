@@ -6,46 +6,44 @@
 
 Rectang::Rectang() //Конструктор без параметров
 {
-	length.storona[0] = 0;
-	length.storona[1] = 0;
+	length = 0;
+	width = 0;
 }
 
-Rectang::Rectang(int a,int b) //Конструктор с параметрами
+Rectang::Rectang(int value_length,int value_width) //Конструктор с параметрами
 {
-	length.storona[0] = a;
-	length.storona[1] = b;
+	length = value_length;
+	width = value_width;
 }
 
-Rectang::Rectang(int a) //Конструктор с 1 параметром
+Rectang::Rectang(int value_length) //Конструктор с 1 параметром
 {
-	length.storona[0] = a;
-	length.storona[1] = 1;
+	length = value_length;
+	width = 1;
 }
 
 Rectang::~Rectang() //Деструктор
 {
 }
 
-void Rectang::setRectang()
+void Rectang::set()
 {
 	printf(" Введите Длину:");
-	scanf("%d", &length.storona[0]);
+	scanf("%d", &length);
 	printf(" Введите Ширину:");
-	scanf("%d", &length.storona[1]);
+	scanf("%d", &width);
 }
 
-int Rectang::areaRectang()
+int Rectang::area()
 {
-	int area;
-	area = length.storona[0] * length.storona[1];
-	return area;
+	return length * width;
 }
 
-void Rectang::printRectang()
+void Rectang::print()
 {
-	printf("\n Длина прямоугольника - %d", length.storona[0]);
-	printf("\n Ширина прямоугольника - %d", length.storona[1]);
-	printf("\n Площадь - %d\n", areaRectang());
+	printf("\n Длина прямоугольника - %d", length);
+	printf("\n Ширина прямоугольника - %d", width);
+	printf("\n Площадь - %d\n", area());
 }
 
 

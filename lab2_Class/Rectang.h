@@ -1,20 +1,19 @@
 #pragma once
 
-#include "Otrezok.h"
-
 class Rectang
 {
 private:
-	Otrezok length;
+	int length;
+	int width;
 
 public:
 	Rectang(); //Конструктор без параметров
-	Rectang(int a,int b);//Конструктор с параметрами
-	Rectang(int a);//Конструктор с 1 параметром
+	Rectang(int value_length,int value_width);//Конструктор с параметрами
+	Rectang(int value_length);//Конструктор с 1 параметром
 	~Rectang(); //Деструктор
-	void setRectang(); //прототипы методов
-	void printRectang();
-	int areaRectang();
+	void set(); //прототипы методов
+	void print();
+	int area();
 };
 
 

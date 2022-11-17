@@ -7,7 +7,6 @@
 #include <windows.h>
 #include <ctype.h>
 #include "Square.h"
-#include "Otrezok.h"
 #include "Rectang.h"
 #include "Triangle.h"
 #include "Trapezoid.h"
@@ -16,9 +15,6 @@
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	//Подключение Русского языка
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
 	int N;
 
 	do
@@ -46,10 +42,10 @@ int main()
 			printf("\n Пример \n");
 			//Вызов конструктора без параметров
 			Square* square1 = new Square; //Выделение Динамической памяти объекту класса Square
-			(*square1).printSquare(); //Вывод площади квадрата на экран
+			(*square1).print(); //Вывод площади квадрата на экран
 			printf("\n\n Введите данные: \n\n");
-			(*square1).setSquare(); //Установка значений
-			(*square1).printSquare();
+			(*square1).set(); //Установка значений
+			(*square1).print();
 			delete square1; //Освобождение памяти 
 			break;
 		 }
@@ -59,10 +55,10 @@ int main()
 			 printf("\n Пример \n");
 			 //Вызов конструктора с 1 параметром
 			 Rectang* rectang1 = new Rectang(7); //Выделение Динамической памяти объекту класса Rectang
-			 rectang1->printRectang(); //Вывод площади Прямоугольника на экран
+			 rectang1->print(); //Вывод площади Прямоугольника на экран
 			 printf("\n\n Введите данные: \n\n");
-			 rectang1->setRectang(); //Установка значений
-			 rectang1->printRectang();
+			 rectang1->set(); //Установка значений
+			 rectang1->print();
 			 delete rectang1; //освобождение памяти
 			 break;
 		 }
@@ -72,10 +68,10 @@ int main()
 			 printf("\n Пример \n");
 			 //Вызов конструктора с 2 параметрами
 			 Triangle* triangle1 = new Triangle(3, 5); //Выделение Динамической памяти объекту класса Triangle
-			 triangle1->printTriangle(); //Вывод площади Треугольника на экран
+			 triangle1->print(); //Вывод площади Треугольника на экран
 			 printf("\n\n Введите данные: \n\n");
-			 triangle1->setTriangle(); //Установка значений
-			 triangle1->printTriangle();
+			 triangle1->set(); //Установка значений
+			 triangle1->print();
 			 delete triangle1; //освобождение памяти
 			 break;
 		 }
@@ -85,10 +81,10 @@ int main()
 			 printf("\n Пример \n");
 			 //Вызов конструктора с 3 параметрами
 			 Trapezoid* trapezoid1 = new Trapezoid(4, 2, 3); //Выделение Динамической памяти объекту класса Trapezoid
-			 trapezoid1->printTrapezoid(); //Вывод площади Трапеции на экран
+			 trapezoid1->print(); //Вывод площади Трапеции на экран
 			 printf("\n\n Введите данные: \n\n");
-			 trapezoid1->setTrapezoid(); //Установка значений
-			 trapezoid1->printTrapezoid();
+			 trapezoid1->set(); //Установка значений
+			 trapezoid1->print();
 			 delete trapezoid1; //освобождение памяти;
 			 break;
 		 }
@@ -98,10 +94,10 @@ int main()
 			 printf("\n Пример \n");
 			 //Вызов конструктора с 1 параметром
 			 Circle* circle1 = new Circle(6); //Выделение Динамической памяти объекту класса Circle
-			 circle1->printCircle(); //Вывод площади Круга на экран
+			 circle1->print(); //Вывод площади Круга на экран
 			 printf("\n\n Введите данные: \n\n");
-			 circle1->setCircle(); //Установка значений
-			 circle1->printCircle();
+			 circle1->set(); //Установка значений
+			 circle1->print();
 			 delete circle1; //освобождение памяти;
 			 break;
 		 }
