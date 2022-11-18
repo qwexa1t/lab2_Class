@@ -1,6 +1,7 @@
 #pragma once
+#include "Figure.h"
 
-class Circle
+class Circle : public Figure
 {
 private:
 	int radius;

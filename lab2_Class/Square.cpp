@@ -25,7 +25,7 @@ void Square::set()
 	scanf("%d", &side);
 }
 
-int Square::area()
+float Square::area()
 {
 	return side * side;
 }
@@ -33,5 +33,5 @@ int Square::area()
 void Square::print()
 {
 	printf("\n Сторона - %d", side);
-	printf("\n Площадь - %d\n", area());
+	printf("\n Площадь - %.0f\n", area());
 }

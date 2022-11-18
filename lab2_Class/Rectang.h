@@ -1,6 +1,7 @@
 #pragma once
+#include "Figure.h"
 
-class Rectang
+class Rectang : public Figure
 {
 private:
 	int length;
@@ -13,7 +14,7 @@ public:
 	~Rectang(); //Деструктор
 	void set(); //прототипы методов
 	void print();
-	int area();
+	float area();
 };
 
 

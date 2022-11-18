@@ -1,6 +1,7 @@
 #pragma once
+#include "Figure.h"
 
-class Triangle
+class Triangle : public Figure
 {
 private:
 	int side;

@@ -34,7 +34,7 @@ void Rectang::set()
 	scanf("%d", &width);
 }
 
-int Rectang::area()
+float Rectang::area()
 {
 	return length * width;
 }
@@ -43,7 +43,7 @@ void Rectang::print()
 {
 	printf("\n Длина прямоугольника - %d", length);
 	printf("\n Ширина прямоугольника - %d", width);
-	printf("\n Площадь - %d\n", area());
+	printf("\n Площадь - %.0f\n", area());
 }
 
 

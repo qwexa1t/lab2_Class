@@ -1,6 +1,7 @@
 #pragma once
+#include "Figure.h"
 
-class Square
+class Square: public Figure
 {
 private:
 	int side;
@@ -11,7 +12,7 @@ public:
 	~Square(); //Деструктор
 	void set(); //прототипы методов
 	void print();
-	int area();
+	float area();
 };
 
 

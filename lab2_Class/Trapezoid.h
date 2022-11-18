@@ -1,6 +1,7 @@
 #pragma once
+#include "Figure.h"
 
-class Trapezoid
+class Trapezoid : public Figure
 {
 private:
 	int lower_base;
